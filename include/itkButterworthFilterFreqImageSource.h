@@ -72,7 +72,7 @@ protected:
   using OutputImageRegionType = typename TOutputImage::RegionType;
 
   void PrintSelf(std::ostream& os, Indent indent) const override;
-  void DynamicThreadedGenerateData(const OutputImageRegionType& outputRegionForThread) override;
+  void ThreadedGenerateData(const OutputImageRegionType& outputRegionForThread, ThreadIdType threadId) override;
 
 private:
 

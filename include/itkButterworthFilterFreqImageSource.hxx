@@ -57,7 +57,7 @@ ButterworthFilterFreqImageSource<TOutputImage>
 template <typename TOutputImage>
 void
 ButterworthFilterFreqImageSource<TOutputImage>
-::DynamicThreadedGenerateData( const OutputImageRegionType& outputRegionForThread )
+::ThreadedGenerateData( const OutputImageRegionType& outputRegionForThread, ThreadIdType threadId)
 {
   OutputImageType * outputPtr = this->GetOutput();
   const SizeType size = this->GetSize();
